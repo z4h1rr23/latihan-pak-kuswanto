@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+ <div id="login">
+    <div id="box">
+        <h2 id="formtitle">Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="username" required>
+            <input type="password" id="password" placeholder="password" required>
+            <button type="submit" id="loginBtn">Login</button>
+        </form>
+        <div id="registerForm" style="display:none;">
+            <form id="regForm">
+                <input type="text" id="regUsername" placeholder="username" required>
+                <input type="password" id="regPassword" placeholder="password" required>
+                <input type="email" id="regEmail" placeholder="email" required>
+                <button type="submit" id="registerBtn">Daftar</button>
+            </form>
+            <button id="backToLogin">Kembali ke Login</button>
+        </div>
+        <p id="forgotPassword" style="text-align:center; margin-top: 10px;"><a href="#" style="color: yellow;">Lupa Password?</a></p>
+        <div id="forgotForm" style="display:none;">
+            <form id="forgotPassForm">
+                <input type="email" id="forgotEmail" placeholder="Masukkan email Anda" required>
+                <button type="submit" id="forgotBtn">Kirim Reset Password</button>
+            </form>
+            <button id="backToLoginFromForgot">Kembali ke Login</button>
+        </div>
+        <p id="toggleText"> Belum Punya Akun? <a href="#" id="toggleLink">Daftar</a></p>
+        <p id="welcomeMessage" style="text-align:center; margin-top: 20px; font-weight: bold; color: yellow; display:none;">Hai,yang buat web ini Azhahir Althaf X RPL.</p>
+        <button id="logoutBtn" style="display:none; margin-top: 20px; padding: 10px; background-color: yellow; border: none; cursor: pointer;">Kembali ke Login</button>
+    </div>
+
+</div>
+<script src="login.js"></script>
+</body>
+</html>
