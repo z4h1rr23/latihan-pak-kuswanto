@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const formTitle = document.getElementById('formtitle');
     const toggleText = document.getElementById('toggleText');
     const welcomeMessage = document.getElementById('welcomeMessage');
+    const mainContent = document.getElementById('mainContent');
     const logoutBtn = document.getElementById('logoutBtn');
 
-    // Toggle to register
     toggleLink.addEventListener('click', function(e) {
         e.preventDefault();
         loginForm.style.display = 'none';
@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleText.style.display = 'none';
     });
 
-    // Back to login
     backToLogin.addEventListener('click', function() {
         registerForm.style.display = 'none';
         loginForm.style.display = 'block';
@@ -30,18 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleText.style.display = 'block';
     });
 
-    // Login submit
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        // No password validation, accept any password
         welcomeMessage.style.display = 'block';
+        mainContent.style.display = 'block';
         loginForm.style.display = 'none';
         toggleText.style.display = 'none';
         forgotPassword.style.display = 'none';
         logoutBtn.style.display = 'block';
     });
 
-    // Logout button
     logoutBtn.addEventListener('click', function() {
         welcomeMessage.style.display = 'none';
         logoutBtn.style.display = 'none';
@@ -51,14 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
         formTitle.textContent = 'Login';
     });
 
-    // Register submit
     regForm.addEventListener('submit', function(e) {
         e.preventDefault();
         alert('Akun berhasil didaftarkan!');
-        backToLogin.click(); // Go back to login
+        backToLogin.click(); 
     });
 
-    // Toggle to forgot password
     forgotPassword.addEventListener('click', function(e) {
         e.preventDefault();
         loginForm.style.display = 'none';
@@ -67,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleText.style.display = 'none';
     });
 
-    // Back to login from forgot
     backToLoginFromForgot.addEventListener('click', function() {
         forgotForm.style.display = 'none';
         loginForm.style.display = 'block';
@@ -75,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleText.style.display = 'block';
     });
 
-    // Forgot submit
     forgotPassForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const email = document.getElementById('forgotEmail').value;
